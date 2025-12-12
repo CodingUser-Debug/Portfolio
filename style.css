@@ -51,7 +51,7 @@ section {
 }
 
 .project a {
-    color: #000000;              
+    color: #1a73e8;              /* blue links inside cards */
     text-decoration: none;
 }
 

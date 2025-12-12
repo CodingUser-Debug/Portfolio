@@ -55,4 +55,6 @@ section {
     text-decoration: none;
 }
 
-
+.project a:hover {
+    text-decoration: underline;
+}

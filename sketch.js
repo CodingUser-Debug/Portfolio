@@ -45,7 +45,7 @@ class Particle {
 
   show() {
     noStroke();
-    fill(120, 170, 255, 180);
+    fill(random(120,125), random(170,177), random(250,255), 180);
     circle(this.pos.x, this.pos.y, this.size);
   }
 }

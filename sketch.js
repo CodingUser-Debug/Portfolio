@@ -31,6 +31,7 @@ class Particle {
     this.pos = createVector(random(width), random(height));
     this.vel = p5.Vector.random2D().mult(random(0.2, 1));
     this.baseSize = random(1.5, 3);
+    this.color = color(random(120, 255), random(170,255), 255, 180);
   }
 
   update() {
@@ -43,7 +44,7 @@ class Particle {
     if (this.pos.y < 0) this.pos.y = height;
 
     // size oscillation
-    this.size = this.baseSize + 5*sin(frameCount * 0.05 + this.pos.x * 0.1);
+    this.size = this.baseSize + 2*sin(frameCount * 0.05 + this.pos.x * 0.1);
   }
 
   show() {

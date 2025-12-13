@@ -15,12 +15,17 @@ header {
     margin-bottom: 40px;
 }
 
-/* Main headings */
-h1, h2 {
+/* Main heading */
+h1 {
     color: #ffffff; /* white text for top headings */
     text-align: center;
 }
 
+/* "Projects" heading */
+h2 {
+    color: #000000; /* black text for section headings */
+    text-align: center;
+}
 /* Section spacing */
 section {
     margin-bottom: 30px;

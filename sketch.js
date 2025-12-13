@@ -26,9 +26,19 @@ function windowResized() {
 
 // --------------------
 
+function mousePressed() {
+  // create 5 particles at mouse position
+  for (let i = 0; i < 3; i++) {
+    particles.push(new Particle(mouseX, mouseY));
+  }
+}
+
+// --------------------
+
 class Particle {
-  constructor() {
-    this.pos = createVector(random(width), random(height));
+  constructor(x, y) {
+    // if x/y are given, use them; otherwise random
+    this.pos = createVector(x ?? random(width), y ?? random(height));
     this.vel = p5.Vector.random2D().mult(random(0.2, 1));
     this.baseSize = random(1.5, 3);
     this.color = color(random(120, 255), random(170,255), 255, 180);
@@ -52,10 +62,4 @@ class Particle {
     fill(this.color);
     circle(this.pos.x, this.pos.y, this.size);
   }
-}
-function mousePressed() {
-  // Draw a circle wherever the mouse is clicked
-  fill(random(255), random(255), random(255));
-  noStroke();
-  ellipse(mouseX, mouseY, 50, 50);
 }

@@ -49,7 +49,7 @@ class Particle {
 
   show() {
     noStroke();
-    fill(120, 170, 255, 180);
+    fill(this.color);
     circle(this.pos.x, this.pos.y, this.size);
   }
 }

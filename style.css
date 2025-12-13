@@ -21,11 +21,7 @@ h1 {
     text-align: center;
 }
 
-/* "Projects" heading */
-h2 {
-    color: #000000; /* black text for section headings */
-    text-align: center;
-}
+
 /* Section spacing */
 section {
     margin-bottom: 30px;
@@ -58,7 +54,10 @@ section {
 .project a:hover {
     text-decoration: underline;
 }
-
+/* Make sure headings inside Projects are black */
+#projects h2 {
+    color: #000000;
+}
 /* About Me section (top text stays white) */
 #about p {
     color: #ffffff; /* ensure text remains white */

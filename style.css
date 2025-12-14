@@ -95,6 +95,40 @@ h1 {
 .profile-pic:hover {
   transform: scale(1.1);
 }
+
+/*Technologies*/
+.tech-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.tech {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 14px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+
+  font-size: 0.95rem;
+}
+
+.tech img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Subtle hover effect */
+.tech:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
 /* =========================
    General Section spacing
    ========================= */

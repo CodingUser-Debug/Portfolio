@@ -144,6 +144,11 @@ h1 {
   transform: translateY(-2px);
 }
 
+#resume {
+  text-align: center; 
+  margin-top: 20px;
+}
+
 /* =========================
    General Section spacing
    ========================= */

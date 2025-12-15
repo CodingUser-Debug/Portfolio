@@ -156,10 +156,20 @@ h1 {
 }
 
 .social-btn img {
-  width: 40px;             /* adjust size as needed */
+  width: 40px;
   height: 40px;
-  transition: transform 0.2s, filter 0.2s;
+  padding: 6px;                     /* space between logo and border */
+  border: 2px solid #1e90ff;        /* border color */
+  border-radius: 50%;                /* makes it circular */
+  transition: transform 0.2s, filter 0.2s, border-color 0.2s;
 }
+
+.social-btn:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  border-color: #00bfff;             /* change color on hover */
+}
+
 
 .social-btn:hover img {
   transform: scale(1.1);   /* slight grow effect */

@@ -148,6 +148,23 @@ h1 {
   text-align: center; 
   margin-top: 20px;
 }
+.social-buttons {
+  display: flex;
+  justify-content: center; /* centers the buttons */
+  gap: 20px;               /* space between buttons */
+  margin-top: 20px;
+}
+
+.social-btn img {
+  width: 40px;             /* adjust size as needed */
+  height: 40px;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.social-btn:hover img {
+  transform: scale(1.1);   /* slight grow effect */
+  filter: brightness(1.2); /* subtle highlight */
+}
 
 /* =========================
    General Section spacing

@@ -10,6 +10,87 @@ body {
     color: #ffffff;
 }
 
+
+
+
+.hero-wrapper {
+    width: 100vw;         /* full viewport width */
+    position: relative;    /* positioning context if needed */
+    margin-left: calc(-50vw + 50%); /* override body centering */
+    padding: 0;
+    margin-top: -20px; /* cancel body padding */
+    scroll-snap-align: start;   /* align top of hero when snapping */
+    scroll-snap-stop: always;   /* ensures snap happens even if scrolling fast */
+}
+
+.hero {
+    height: 100vh;        /* full viewport height */
+    width: 100%;          /* fill wrapper */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: white;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+}
+html, body {
+  scroll-snap-type: y proximity;  /* only affects elements that have scroll-snap-align */
+}
+/* Content section */
+.content {
+  position: relative;        /* for profile positioning */
+}
+
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.8;
+  color: black; /* make sure it’s visible on white background */
+}
+
+.scroll-indicator span {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-45deg);
+  }
+}
+
+
 /* =========================
    Header
    ========================= */
@@ -22,6 +103,9 @@ header {
 h1 {
     color: #ffffff; /* white */
     text-align: center;
+}
+.hero h1 {
+  color: black;
 }
 
 /* =========================
@@ -80,21 +164,32 @@ h1 {
 .project a:hover {
     text-decoration: underline;
 }
+.profile-pic-wrapper {
+    position: absolute;   /* positioned relative to nearest positioned parent, here body */
+    right: 10%
+}
+
 .profile-pic {
-    position: absolute;       /* float in top-right */
-    top: 40px;                /* distance from top */
-    right: 40px;              /* distance from right */
-    width: 150px;             /* adjust size */
-    height: 150px;            /* same as width for perfect circle */
-    border-radius: 50%;       /* makes it a circle */
-    object-fit: cover;        /* crop image nicely */
-    border: 3px solid #fff;   /* optional white border */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.5); /* optional shadow */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
     transition: transform 0.3s ease;
 }
 .profile-pic:hover {
   transform: scale(1.1);
 }
+@media (max-width: 768px) {
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+        top: 50px;
+        right: 20px;
+    }
+}
+
 
 /*Technologies*/
 .tech-container {

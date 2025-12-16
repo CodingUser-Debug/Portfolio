@@ -131,17 +131,19 @@ h1 {
 .resume-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #1e90ff;  /* bright blue, change to match theme */
+  background-color: #add8e6;  /* bright blue, change to match theme */
   color: #fff;
   font-weight: bold;
   text-decoration: none;
   border-radius: 6px;
+  border: 3px solid #1e90ff;
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .resume-btn:hover {
-  background-color: #0f6cd4;  /* slightly darker blue */
+  background-color: #badfed;  /* slightly darker blue */
   transform: translateY(-2px);
+   border-color: #00bfff;
 }
 
 #resume {

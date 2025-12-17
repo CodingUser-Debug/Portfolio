@@ -266,7 +266,7 @@ h1 {
   font-weight: bold;
   text-decoration: none;
   border-radius: 6px;
-  border: 3px solid #1e90ff;
+  border: 3px solid #ffffff;
   transition: background-color 0.3s, transform 0.2s;
 }
 
@@ -291,7 +291,7 @@ h1 {
   width: 45px;
   height: 45px;
   padding: 0px;                     /* space between logo and border */
-  border: 3px solid #1e90ff;        /* border color */
+  border: 3px solid #ffffff;        /* border color */
   border-radius: 50%;                /* makes it circular */
   transition: transform 0.2s, filter 0.2s, border-color 0.2s;
 }

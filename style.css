@@ -1,6 +1,10 @@
 /* =========================
    General body styles
    ========================= */
+html, body {
+  overflow-x: hidden;
+}
+
 body {
    font-family: Arial, sans-serif;
     max-width: 800px;

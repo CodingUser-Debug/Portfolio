@@ -172,6 +172,11 @@ h1 {
     line-height: 1.6;
 }
 
+.highlight {
+  color: #5eead4;
+  font-weight: 500;
+  text-shadow: 0 0 6px rgba(94, 234, 212, 0.35);
+}
 /* =========================
    Projects Section
    ========================= */

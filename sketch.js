@@ -16,7 +16,7 @@ function setup() {
 }
 
 function draw() {
-  background(10, 15, 25);
+  background(5, 10, 20);
 
   for (let p of particles) {
     p.update();
@@ -50,9 +50,9 @@ function mouseReleased() {
 class Particle {
   constructor(x, y) {
     this.pos = createVector(x ?? random(width), y ?? random(height));
-    this.vel = p5.Vector.random2D().mult(random(0.2, 1));
+    this.vel = p5.Vector.random2D().mult(random(0.1, 0.6));
     this.baseSize = random(1.5, 3);
-    this.color = color(random(120, 255), random(170,255), 255, 180);
+    this.color = color(random(170, 255), random(170,255), random(240,255), 180);
   }
 
   update() {
@@ -73,7 +73,7 @@ class Particle {
     if (this.pos.y > height) this.pos.y = 0;
     if (this.pos.y < 0) this.pos.y = height;
 
-    this.size = this.baseSize + sin(frameCount * 0.05 + this.pos.x * 0.1);
+    this.size = this.baseSize + 0.8*sin(frameCount * 0.04 + this.pos.x * 0.1);
   }
 
   show() {
